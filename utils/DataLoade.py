@@ -24,7 +24,7 @@ class CustomDataset(Dataset):
     def __init__(self,data_root_csv,input_width,input_height,test=False):
         super(CustomDataset, self).__init__()  # 在子类进行初始化时，也想继承父类的__init__()就通过super()实现
         self.data_root_csv = data_root_csv
-        self.data_all = pd.read_csv(self.data_root_csv)
+        self.data_all = pd.read_csv(self.data_root_csv,header=None)
         self.image_list = list(self.data_all.iloc[:,0])
         self.label_list = list(self.data_all.iloc[:,1])
         self.width = input_width
