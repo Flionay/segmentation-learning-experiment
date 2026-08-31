@@ -1,3 +1,5 @@
+
+
 # 语义分割学习实验-基于VOC数据集
 ### usage：
 1. 下载VOC数据集，将`JPEGImages` `SegmentationClass`两个文件夹放入到data文件夹下。
@@ -16,4 +18,4 @@ optional arguments:
 ```
 选择模型和GPU编号进行训练，例如运行`python train.py -m Unet -g 0`
 
-3. 预测需要手动修改`predict.py`中的模型
+3. 预测需要手动修改`predict.py`中的`model`和`GPU_ID`
